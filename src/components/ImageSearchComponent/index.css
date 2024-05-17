@@ -7,6 +7,15 @@
 
 
 }
+
+@media (max-width:480px){
+  button{
+    margin-top: 12px;
+  }
+  input{
+    width:88%;
+  }
+}
 form {
     margin: 20px 0;
     text-align: center;
@@ -62,6 +71,12 @@ form {
     border-radius: 4px;
     white-space: nowrap;
     pointer-events: none;
+  }
+
+  @media (max-width:650px){
+    .image-popup{
+     top:20px;
+    }
   }
   
   .image-container:hover .image-popup {

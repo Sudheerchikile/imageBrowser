@@ -1,4 +1,3 @@
-// src/ImageSearch.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './index.css';
@@ -6,15 +5,16 @@ import { FidgetSpinner } from 'react-loader-spinner';
 
 const ImageSearch = () => {
   const [query, setQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    if (query) {
-      fetchImages(query);
+    if (searchQuery) {
+      fetchImages(searchQuery);
     }
-  }, [query]);
+  }, [searchQuery]);
 
   const fetchImages = async (searchQuery) => {
     setLoading(true);
@@ -35,7 +35,7 @@ const ImageSearch = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (query.trim()) {
-      fetchImages(query);
+      setSearchQuery(query);
     } else {
       alert('Please enter a search term.');
     }
