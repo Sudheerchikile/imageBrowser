@@ -8,6 +8,16 @@
 
 }
 
+.buttons-con{
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  margin-top: 14px;
+
+}
+
 @media (max-width:480px){
   button{
     margin-top: 12px;
@@ -28,7 +38,7 @@ form {
     border-radius: 4px;
   }
   
-  button {
+  .search-button {
     padding: 10px 15px;
     border: none;
     background-color: #333;
@@ -36,6 +46,32 @@ form {
     cursor: pointer;
     border-radius: 4px;
     margin-left: 10px;
+  }
+
+
+button{
+  background-color: rgb(208, 184, 231);
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+
+  
+}
+
+.search-heading{
+  color: rgba(0, 255, 179, 0.61);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align:left;
+
+
+}
+
+  button:hover{
+    
+    background-color: cadetblue;
+    filter: drop-shadow(0 0 10px coral);
+
   }
   
   .image-grid {
